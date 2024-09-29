@@ -1,4 +1,4 @@
-package groupProjectDatabase;
+package groupProject;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
