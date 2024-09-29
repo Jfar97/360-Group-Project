@@ -4,18 +4,18 @@ import java.util.ArrayList;
 
 public class User {
 	
-	public String username;
+	private String username;
 	// Needs to be changed to a char array
-	public String password;
-	public Boolean hasAdminRole;
-	public Boolean hasStudentRole;
-	public Boolean hasInstructorRole;
-	public String email;
-	public String firstName;
-	public String lastName;
-	public String middleName;
-	public String preferredName;
-	public Boolean accountNeedsSetup;
+	private String password;
+	private Boolean hasAdminRole;
+	private Boolean hasStudentRole;
+	private Boolean hasInstructorRole;
+	private String email;
+	private String firstName;
+	private String lastName;
+	private String middleName;
+	private String preferredName;
+	private Boolean accountNeedsSetup;
 
 	
 	// Constructor parameters and body structure will most likely need to be changed
@@ -96,7 +96,7 @@ public class User {
 	
 	// Used to check if the user will need to access the role selection page
 	public boolean hasMultipleRoles() {
-		ArrayList<UserRole.roleList> availableRolls = getUserRoles();
+		ArrayList<UserRole.roleList> availableRoles = getUserRoles();
 		if(availableRoles.size() > 1)
 		{
 			return true;
