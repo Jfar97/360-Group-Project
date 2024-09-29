@@ -19,11 +19,30 @@ public class DatabaseHelper {
 
 	private Connection connection = null;
 	private Statement statement = null; 
-	//	PreparedStatement 
 	
 	
+	// Create tables function altered to create the necessary database fields for the user class
+	private void createTables() throws SQLException {
+	    String userTable = "CREATE TABLE IF NOT EXISTS cse360users ("
+	        + "id INT AUTO_INCREMENT PRIMARY KEY, "
+	        + "username VARCHAR(255) UNIQUE, "
+	        + "password VARCHAR(255), "
+	        + "hasAdminRole BOOLEAN, "
+	        + "hasStudentRole BOOLEAN, "
+	        + "hasInstructorRole BOOLEAN, "
+	        + "email VARCHAR(255) UNIQUE, "
+	        + "firstName VARCHAR(255), "
+	        + "lastName VARCHAR(255), "
+	        + "middleName VARCHAR(255), "
+	        + "preferredName VARCHAR(255), "
+	        + "accountNeedsSetup BOOLEAN"
+	        + ")";
+	    statement.execute(userTable);
+	}
 	
-
+	
+	// BELOW FUNCTIONS ARE FROM ORIGINAL 360 FILE DOWNLOAD
+	// USED FOR REFERENCE FOR OTHER DATABASE MANAGEMENT FUNCTIONS
 	public void connectToDatabase() throws SQLException {
 		try {
 			Class.forName(JDBC_DRIVER); // Load the JDBC driver
@@ -34,15 +53,6 @@ public class DatabaseHelper {
 		} catch (ClassNotFoundException e) {
 			System.err.println("JDBC Driver not found: " + e.getMessage());
 		}
-	}
-
-	private void createTables() throws SQLException {
-		String userTable = "CREATE TABLE IF NOT EXISTS cse360users ("
-				+ "id INT AUTO_INCREMENT PRIMARY KEY, "
-				+ "email VARCHAR(255) UNIQUE, "
-				+ "password VARCHAR(255), "
-				+ "role VARCHAR(20))";
-		statement.execute(userTable);
 	}
 
 
