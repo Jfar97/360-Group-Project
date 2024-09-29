@@ -18,16 +18,16 @@ public class User {
 	
 	// Constructor parameters and body structure will most likely need to be changed
 	public User (
-			// Constructor parameters
-			String usernameInput,
+		// Constructor parameters
+		String usernameInput,
 	        String passwordInput,
 	        Boolean hasAdminRoleInput,
 	        Boolean hasStudentRoleInput,
 	        Boolean hasInstructorRoleInput
-	    ) {
-			// Constructor body
-			// User variables that have their values set up when the account is created
-			// Page inputs
+    	) {
+		// Constructor body
+		// User variables that have their values set up when the account is created
+		// Page inputs
 	        this.username = usernameInput;
 	        this.password = passwordInput;
 	        // Managed by account creation code
@@ -73,18 +73,18 @@ public class User {
 	public void userSetupAccount(
 		// Account set up inputs
 		String emailInput,
-        String firstNameInput,
-        String lastNameInput,
-        String middleNameInput,
-        String preferredNameInput
+	        String firstNameInput,
+	        String lastNameInput,
+	        String middleNameInput,
+	        String preferredNameInput
         ) {
 		// Account set up body
 		this.email = emailInput;
-        this.firstName = firstNameInput;
-        this.lastName = lastNameInput;
-        this.middleName = middleNameInput;
-        this.preferredName = preferredNameInput;
-        // Account no longer needs to be set up
+	        this.firstName = firstNameInput;
+	        this.lastName = lastNameInput;
+	        this.middleName = middleNameInput;
+	        this.preferredName = preferredNameInput;
+	        // Account no longer needs to be set up
 		this.accountNeedsSetup = false;
 	}
 	
