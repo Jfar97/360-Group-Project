@@ -55,8 +55,8 @@ public class User {
 
 	
 	// Returns an ArrayList with the roles associated with the user
-	public ArrayList<UserRole.rollList> getUserRoles() {
-		ArrayList<UserRole.rollList> currentAvailableRoles = new ArrayList<>();
+	public ArrayList<UserRole.roleList> getUserRoles() {
+		ArrayList<UserRole.roleList> currentAvailableRoles = new ArrayList<>();
 		if(this.hasAdminRole)
 		{
 			currentAvailableRoles.add(roles.getAdmin());
@@ -96,8 +96,8 @@ public class User {
 	
 	// Used to check if the user will need to access the role selection page
 	public boolean hasMultipleRoles() {
-		ArrayList<UserRole.rollList> availableRolls = getUserRoles();
-		if(availableRolls.size() > 1)
+		ArrayList<UserRole.roleList> availableRolls = getUserRoles();
+		if(availableRoles.size() > 1)
 		{
 			return true;
 		}
