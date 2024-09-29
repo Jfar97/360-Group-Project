@@ -51,7 +51,7 @@ public class User {
 	
 	// Private variable only accessible to class
 	// Static as it will be the same across all instances
-	private static UserRole rolls = new UserRole();
+	private static UserRole roles = new UserRole();
 
 	
 	// Returns an ArrayList with the roles associated with the user
@@ -59,15 +59,15 @@ public class User {
 		ArrayList<UserRole.rollList> currentAvailableRoles = new ArrayList<>();
 		if(this.hasAdminRole)
 		{
-			currentAvailableRoles.add(rolls.getAdmin());
+			currentAvailableRoles.add(roles.getAdmin());
 		}
 		if(this.hasStudentRole)
 		{
-			currentAvailableRoles.add(rolls.getStudent());
+			currentAvailableRoles.add(roles.getStudent());
 		}
 		if(this.hasInstructorRole)
 		{
-			currentAvailableRoles.add(rolls.getInstructor());
+			currentAvailableRoles.add(roles.getInstructor());
 		}
 		
 		return currentAvailableRoles;

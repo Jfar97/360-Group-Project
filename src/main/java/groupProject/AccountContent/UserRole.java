@@ -1,21 +1,21 @@
 package groupProject.AccountContent;
 
 public class UserRole {
-	public enum rollList {
+	public enum roleList {
 	    ADMIN,
 	    STUDENT,
 	    INSTRUCTOR
 	}
 	
-	public rollList getAdmin() {
-		return rollList.ADMIN;
+	public roleList getAdmin() {
+		return roleList.ADMIN;
 	}
 	
-	public rollList getStudent() {
-		return rollList.STUDENT;
+	public roleList getStudent() {
+		return roleList.STUDENT;
 	}
 	
-	public rollList getInstructor() {
-		return rollList.INSTRUCTOR;
+	public roleList getInstructor() {
+		return roleList.INSTRUCTOR;
 	}
 }
